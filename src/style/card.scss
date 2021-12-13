@@ -1,0 +1,125 @@
+@import "../index.scss";
+
+.aboutCards,
+.privacyCard {
+  padding: 20px;
+  background: $cardDark;
+  box-shadow: 0px 3px 30px rgba(3, 6, 7, 0.1);
+  &_link {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutCards {
+    width: 280px;
+    p {
+      word-wrap: break-word;
+    }
+  }
+}
+
+.opensourceCard,
+.ecosystemCard {
+  padding: 20px;
+  background: rgba(233, 246, 247, 1);
+  &_button {
+    display: flex;
+    align-items: center;
+
+    span {
+      font-family: $Metropolis-Regular;
+    }
+    gap: 20px;
+  }
+  &_prodImage {
+    width: 100%;
+  }
+  .ecosystemCard_company {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+    @media (max-width: 576px) {
+      // flex-direction: column;
+      // gap: 10px;
+    }
+  }
+}
+
+.featureCard {
+  &_details {
+    padding: 150px 20px 20px;
+    // width: 80%;
+    &_link {
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      width: auto;
+    }
+  }
+
+  #feature1 {
+    &_details {
+      background: url("../assets/images/featuredContent.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-right: 20px;
+    }
+  }
+  #feature2 {
+    &_details {
+      background: url("../assets/images/featuredWebminar.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  #feature3 {
+    &_details {
+      background: url("../assets/images/feature1.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  #feature5 {
+    &_details {
+      background: url("../assets/images/getIntouch.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  #feature6 {
+    &_details {
+      background: url("../assets/images/mentorship.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.blogCard {
+  &_image {
+    position: relative;
+    height: 220px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    p {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+    }
+  }
+  &_time {
+    display: flex;
+    justify-content: space-between;
+    p:first-child {
+      display: flex;
+    }
+  }
+}

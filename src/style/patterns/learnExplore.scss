@@ -1,0 +1,55 @@
+.learnPattern {
+  background-size: cover;
+  margin-right: 250px;
+  // opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  > div {
+    padding: 277px 50px 50px 550px;
+    p {
+      max-width: 550px;
+    }
+  }
+}
+
+.explorePattern {
+  background-size: cover;
+  margin-left: 250px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  // opacity: 0.7;
+  // background: no-repeat right linear-gradient(#2AD1D1, #009EE1);
+  > div {
+    padding: 277px 50px 50px 50px;
+    p {
+      max-width: 550px;
+    }
+  }
+}
+
+.buttonWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1300px) {
+  .learnPattern,
+  .explorePattern {
+    margin: 20px;
+    > div {
+      padding: 20px;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 576px) {
+//   .learnPattern,
+//   .explorePattern {
+//     .para {
+//       // display: none;
+//     }
+//   }
+// }

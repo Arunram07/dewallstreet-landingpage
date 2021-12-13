@@ -1,0 +1,16 @@
+.freeQuoteNav{
+    padding: 30px 50px;
+  @media (max-width: 768px) {
+    padding: 30px 50px;
+  }
+  @media (max-width: 576px) {
+    padding: 30px 20px;
+  }
+}
+
+.freeQuote{
+    margin-top: -30px;
+    @media (max-width: 768px) {
+        margin-top: -50px;
+      }
+}

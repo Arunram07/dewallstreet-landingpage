@@ -1,0 +1,24 @@
+[
+  {
+    "id": "feature1",
+    "mainHeading": "Featured content",
+    "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl blandit odio in. Non semper natoque risus et erat donec at. Pellentesque et suspendisse volutpat elementum et.",
+    "heading": "Linux Kernel mentees break open source glass ceiling",
+    "link": "Read full blog post"
+  },
+  {
+    "id": "feature2",
+    "mainHeading": "Featured webminar",
+    "date": "Date: Jul 13, 2021",
+    "time": "5:30 - 7:00PM PDT (UTC-7)",
+    "heading": "Extra Boot Configuration and Boot-time Tracing with DeWall Street Corporation",
+    "link": "Register now"
+  },
+  {
+    "id": "feature3",
+    "mainHeading": "Featured trainings",
+    "data": "Create a RISC-V CPU with modern open source circuit design tools, methodologies, and microarchitecture, all from your browser.",
+    "heading": "Building a RISC-V CPU Core",
+    "link": "Enroll now"
+  }
+]

@@ -1,0 +1,51 @@
+.testimonial {
+  padding: 0px 50px;
+  margin: 50px 0px 100px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+    // text-align: center;
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 70px;
+
+  &_buttonWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &_comment {
+    background: rgba(9, 18, 21, 1);
+    box-shadow: 0px 3px 30px 0px rgba(3, 6, 7, 0.1);
+    padding: 30px;
+    position: relative;
+
+    &_network {
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0.2;
+    }
+
+    &_footer {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 25px;
+      }
+      > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+    }
+  }
+}

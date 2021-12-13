@@ -1,0 +1,22 @@
+.customer {
+  padding: 0px 50px;
+  margin: 0px 0px 100px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+    // text-align: center;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
+  &_heading {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  &_details{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

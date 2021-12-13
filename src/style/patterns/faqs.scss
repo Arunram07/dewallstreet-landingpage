@@ -1,0 +1,49 @@
+.faqs {
+  padding: 0px 50px;
+  margin: 100px 0px 50px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
+  &_heading {
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 30px;
+    > p {
+      margin-bottom: 20px;
+    }
+    > div {
+      width: fit-content;
+      margin: 0px auto;
+    }
+  }
+
+  &_service{
+    display: grid;
+    grid-template-columns: 380px auto;
+    grid-gap: 30px;
+    @media (max-width: 990px) {
+      grid-template-columns: 1fr;
+    }
+    > div:first-child {
+      padding: 20px;
+      height: fit-content;
+      position: relative;
+      box-shadow: 0px 3px 30px 0px rgba(3, 6, 7, 0.1);
+      border-radius: 3px;
+      background: #091215;
+      >div{
+          >p{
+              margin-bottom: 20px;
+          }
+      }
+    }
+    > div:nth-child(2) {
+        ul{
+            padding-left: 20px;
+        }
+    }
+  }
+}

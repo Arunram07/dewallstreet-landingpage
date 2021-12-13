@@ -1,0 +1,35 @@
+.features {
+  padding: 0px 50px;
+  margin: 50px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+    // text-align: center;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
+  > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  > div:first-child {
+    grid-gap: 50px 0px;
+    margin-bottom: 50px;
+  }
+  > div:nth-child(2) {
+    grid-gap: 50px;
+  }
+  &_explore {
+    margin-left: 50px;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+    }
+    &_buttonWrap {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+    }
+  }
+}

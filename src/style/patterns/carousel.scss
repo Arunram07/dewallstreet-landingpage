@@ -1,0 +1,67 @@
+.heroSection {
+  padding: 122px 50px 30px;
+  margin-bottom: 30px;
+  background: url("../../assets/images/hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  @media (max-width: 768px) {
+    padding: 122px 50px 30px;
+    // text-align: center;
+  }
+  @media (max-width: 576px) {
+    padding: 122px 20px 30px;
+  }
+}
+
+.hero {
+  width: 60%;
+  @media (max-width: 992px) {
+    width: 70%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  &_heading {
+    span {
+      margin-right: 15px;
+    }
+  }
+
+  &_link {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.heroFoot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+  &_social {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &_scroll {
+    text-align: center;
+    img {
+      margin-bottom: 15px;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      text-align: start;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}

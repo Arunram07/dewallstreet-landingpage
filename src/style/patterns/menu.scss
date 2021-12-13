@@ -1,0 +1,65 @@
+.menu {
+  position: fixed;
+  background: black;
+  height: 110vh;
+  z-index: 10;
+  right: 0;
+  top: 0;
+
+  &_grid {
+    display: flex;
+    &_heading {
+      img:first-child {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+    &_icons {
+      margin: 250px 50px 0px;
+      display: flex;
+      gap: 25px;
+    }
+    > div:nth-child(2) {
+      background: #060c0e;
+      padding: 60px 0px;
+      p {
+        // margin: 18px 30px 18px 50px;
+        text-align: end;
+        cursor: pointer;
+      }
+    }
+    > div:nth-child(1) {
+      background: #091215;
+      height: 100vh;
+      padding: 60px 20px;
+      margin-top: 0px;
+      display: none;
+      transition: 200ms all;
+      p {
+        margin: 18px 30px;
+        cursor: pointer;
+        text-align: end;
+      }
+    }
+  }
+}
+
+.passImage {
+  position: absolute;
+  float: left;
+  top: 550px;
+  @media (max-width: 576px) {
+    top: 490px;
+  }
+}
+
+.menuSelect::after {
+  content: "";
+  border-right: 5px solid #009ee1;
+  padding-right: 5px;
+}
+
+.linkDecoration {
+  text-decoration: none;
+}

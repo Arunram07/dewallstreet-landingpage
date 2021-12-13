@@ -1,0 +1,24 @@
+.openTech {
+  padding: 0px 50px;
+  margin: 50px 0px 100px 0px;
+  @media (max-width: 768px) {
+    padding: 0px 50px;
+    // text-align: center;
+  }
+  @media (max-width: 576px) {
+    padding: 0px 20px;
+  }
+  &_heading {
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 30px;
+  }
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    overflow: auto;
+    @media (max-width: 768px) {
+    }
+  }
+}

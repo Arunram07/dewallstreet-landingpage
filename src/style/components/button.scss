@@ -1,0 +1,38 @@
+.primary_btn {
+  border: 1px solid transparent;
+  background: linear-gradient(98.09deg, #00ffff -57.4%, #0090ce 79.06%);
+  color: rgba(255, 255, 255, 1);
+}
+
+.secondary_btn {
+  background: transparent;
+  border: 1px solid #0090ce;
+  color: rgba(255, 255, 255, 1);
+}
+
+.secondaryBlack_btn {
+  background: transparent;
+  color: rgba(36, 46, 51, 1);
+  border: 1px solid #0090ce;
+}
+
+.primaryBlack_btn {
+  border: 1px solid transparent;
+  background: linear-gradient(98.09deg, #00ffff -57.4%, #0090ce 79.06%);
+  color: rgba(36, 46, 51, 1);
+}
+
+.secondary_slideEffect:hover {
+  box-shadow: inset 0 0 0 40px #0090ce;
+}
+
+.primary_slideEffect:hover {
+  box-shadow: inset 0 0 0 40px rgba(6, 12, 14, 1);
+  border: 1px solid #0090ce;
+}
+
+.secondaryBlack_slideEffect:hover {
+  box-shadow: inset 0 0 0 40px #0090ce;
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 1);
+}

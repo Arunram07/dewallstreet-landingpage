@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Home",
+    "to": "/"
+  },
+  {
+    "name": "About Us",
+    "to": "/about",
+    "subLinks": [
+      {
+        "name": "Board of Directors",
+        "to": "/about"
+      },
+      {
+        "name": "Technical Advisory Board",
+        "to": "/about"
+      },
+      {
+        "name": "Fellows",
+        "to": "/about"
+      },
+      {
+        "name": "Leadership",
+        "to": "/about"
+      },
+      {
+        "name": "Indivisual Supporters",
+        "to": "/about"
+      }
+    ]
+  },
+  {
+    "name": "Products",
+    "to": "/products"
+  },
+  {
+    "name": "Services",
+    "to": "/services"
+  },
+  {
+    "name": "Resources",
+    "to": "/resources"
+  },
+  {
+    "name": "Research",
+    "to": "/research"
+  },
+  {
+    "name": "Events",
+    "to": "/events"
+  },
+  {
+    "name": "DeWall Street Tools",
+    "to": "/DeWall Street Tools"
+  },
+  {
+    "name": "Training",
+    "to": "/training"
+  }
+]

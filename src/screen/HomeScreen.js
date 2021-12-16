@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import Carousel from "../patterns/Carousel";
@@ -16,9 +16,6 @@ import img1 from "../assets/images/dStechMethod.png";
 import img2 from "../assets/images/exploreImg.png";
 
 const HomeScreen = () => {
-  useEffect(() => {
-    document.title = "DeWall Street";
-  }, []);
   return (
     <>
       <Helmet>
@@ -35,7 +32,7 @@ const HomeScreen = () => {
       <Contribution />
       <LearnExplore
         img1={img1}
-        head1="The DeWall Street Corporation Tech Method"
+        head1="The DeWallStreet Corporation Tech Method"
         para1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Senectus a
             feugiat vitae pellentesque urna massa in. Sit id hendrerit elit
             cursus mattis aliquam, sociis nibh. Nec arcu augue eu tellus vitae
@@ -48,9 +45,10 @@ const HomeScreen = () => {
         cursus mattis aliquam, sociis nibh. Nec arcu augue eu tellus vitae
         neque."
         btn2="Explore projects"
+        btn2Link="/products"
       />
       <Ecosystem
-        heading=" At DeWall Street Corporation, we work with various sustainable
+        heading=" At DeWallStreet Corporation, we work with various sustainable
         ecosystems"
         para="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In morbi est
         enim adipiscing elementum libero a in arcu. Nunc massa, sollicitudim."

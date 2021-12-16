@@ -329,7 +329,7 @@ const FreeDemo = () => {
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="get-quote">
       <Formik
         initialValues={initialState}
         validationSchema={validationSchema}

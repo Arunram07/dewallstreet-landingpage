@@ -26,6 +26,9 @@
 .ecosystemCard {
   padding: 20px;
   background: rgba(233, 246, 247, 1);
+  .hover-btn {
+    display: none;
+  }
   &_button {
     display: flex;
     align-items: center;
@@ -121,5 +124,46 @@
     p:first-child {
       display: flex;
     }
+  }
+}
+.image-container {
+  transition: 300ms all;
+  overflow: hidden;
+
+  &:hover {
+    .hover-btn {
+      visibility: visible;
+      opacity: 1;
+    }
+    img {
+      transform: scale(1.2);
+      filter: blur(5px);
+    }
+  }
+  img {
+    transition: transform 3s ease-in-out, filter 100ms linear;
+  }
+  .hover-btn {
+    // background: linear-gradient(93.84deg, #2ad1d1 -9.48%, #009ee1 111.63%);
+    background-color: transparent;
+    font-family: "Metropolis-Medium";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #fff;
+    background: linear-gradient(93.84deg, #2ad1d1 -9.48%, #009ee1 111.63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+
+    border-radius: 10px;
+    z-index: 100;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
   }
 }

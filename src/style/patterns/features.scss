@@ -9,10 +9,13 @@
     padding: 0px 20px;
   }
   > div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+
+    .featureCard_details_link {
+      display: flex;
+      align-items: center;
     }
   }
   > div:first-child {

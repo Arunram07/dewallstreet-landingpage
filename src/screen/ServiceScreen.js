@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 
 import About from "../patterns/About";
@@ -13,16 +13,13 @@ import FreeDemo from "../patterns/FreeDemo";
 import Faqs from "../patterns/Faqs";
 
 const ServiceScreen = () => {
-  useEffect(() => {
-    document.title = "Services | DeWall Street";
-  }, []);
   return (
     <div className=" nav_pad ">
       <Helmet>
         <title>Services | DeWallStreet</title>
         <meta
           name="description"
-          content="DeWall Street Corporation offers premier Blockchain Development Services and Solutions that facilitates startups and enterprises to leverages decentralization, transperancy and automation in the world information technology business."
+          content="DeWallStreet Corporation offers premier Blockchain Development Services and Solutions that facilitates startups and enterprises to leverages decentralization, transperancy and automation in the world information technology business."
         />
       </Helmet>
       <div className="pad">
@@ -42,7 +39,7 @@ const ServiceScreen = () => {
       <Opensource variant="blockchain" />
       <About variant="whyUs" />
       <Blogs variant="service" />
-      <Faqs />
+      {/* <Faqs /> */}
       <FreeDemo />
     </div>
   );

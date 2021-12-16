@@ -1,11 +1,11 @@
 import React from "react";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 import member1 from "../assets/images/member1.png";
 import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
 import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 import { ReactComponent as Discord } from "../assets/icons/discord.svg";
-
+import TeamCard from "./TeamCard";
 import "../style/patterns/team.scss";
 
 const Member = ({ image, name, designation }) => {
@@ -40,15 +40,15 @@ const Member = ({ image, name, designation }) => {
 };
 
 const Team = () => {
-  const renderTitles = (
-    <>
-      <Button variant="primary" children="All" type="submit" />
-      <Button variant="secondaryBlack" children="Leadership" type="submit" />
-      <Button variant="secondaryBlack" children="Technology" type="submit" />
-      <Button variant="secondaryBlack" children="Design" type="submit" />
-      <Button variant="secondaryBlack" children="Operations" type="submit" />
-    </>
-  );
+  // const renderTitles = (
+  //   <>
+  //     <Button variant="primary" children="All" type="submit" />
+  //     <Button variant="secondaryBlack" children="Leadership" type="submit" />
+  //     <Button variant="secondaryBlack" children="Technology" type="submit" />
+  //     <Button variant="secondaryBlack" children="Design" type="submit" />
+  //     <Button variant="secondaryBlack" children="Operations" type="submit" />
+  //   </>
+  // );
 
   const renderAbout = (
     <div className="team_about">
@@ -61,7 +61,7 @@ const Team = () => {
         passionate about software development and about unlocking the power of open technology to
         drive shared innovation for the collective benefit.
       </p>
-      <div className="team_about_titles">{renderTitles}</div>
+      {/* <div className="team_about_titles">{renderTitles}</div> */}
     </div>
   );
 
@@ -79,8 +79,17 @@ const Team = () => {
   );
 
   const renderMembers = (
-    <div className="team_members">
-      <Member image={member1} name="Courtney Henry" />
+    <div className="team_members" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+
+      {/* <Member name="Courtney Henry" />
       <Member image={member1} name="Marvin McKinney" />
       <Member image={member1} name="Robert Fox" />
       <Member image={member1} name="Darlene Robertson" />
@@ -90,7 +99,7 @@ const Team = () => {
       <Member image={member1} name="Guy Hawkins" />
       <Member image={member1} name="Leslie Alexander" />
       <Member image={member1} name="Arlene McCoy" />
-      <Member image={member1} name="Savannah Nguyen" />
+      <Member image={member1} name="Savannah Nguyen" /> */}
     </div>
   );
 

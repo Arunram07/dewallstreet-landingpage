@@ -1,8 +1,9 @@
 import React from "react";
+
 import "../style/patterns/aboutCarousel.scss";
 
 import { ReactComponent as Chain } from "../assets/icons/chainClubbed.svg";
-import { ReactComponent as Arrow } from "../assets/icons/arrowRight.svg";
+// import { ReactComponent as Arrow } from "../assets/icons/arrowRight.svg";
 
 import NavBar from "./NavBar";
 import Button from "../components/Button";
@@ -29,8 +30,10 @@ const AboutCarousel = ({ heading, para, variant, ...rest }) => {
       </p>
       <p className="text_secondaryLite_14">{para}</p>
       <div className="buttonWrap mt-30">
-        <span style={{ color: "#fff", fontFamily: "Metropolis-Regular" }}>Browse projects</span>
-        <Button variant="primary" children="Start free trail" imgLeft={<Arrow />} />
+        <a href="/products#our-products">
+          <span style={{ color: "#fff", fontFamily: "Metropolis-Regular" }}>Browse projects</span>
+        </a>
+        {/* <Button variant="primary" children="Start free trail" imgLeft={<Arrow />} /> */}
       </div>
     </>
   );
@@ -44,8 +47,10 @@ const AboutCarousel = ({ heading, para, variant, ...rest }) => {
       </p>
       <p className="text_secondaryLite_14">{para}</p>
       <div className="buttonWrap mt-30">
-        <Button variant="secondary" children="Get a quote" />
-        <Button variant="secondary" children="Get a free demo" />
+        <a href="/services#get-quote">
+          <Button variant="secondary" children="Get a quote" />
+        </a>
+        {/* <Button variant="secondary" children="Get a free demo" /> */}
       </div>
     </>
   );
@@ -60,8 +65,10 @@ const AboutCarousel = ({ heading, para, variant, ...rest }) => {
       </p>
       <p className="text_secondaryLite_14">{para}</p>
       <div className="buttonWrap mt-30">
-        <Button variant="secondary" children="Get a quote" />
-        <Button variant="secondary" children="Get a free demo" />
+        <a href="/services#get-quote">
+          <Button variant="secondary" children="Get a quote" />
+        </a>
+        {/* <Button variant="secondary" children="Get a free demo" /> */}
       </div>
     </>
   );

@@ -25,7 +25,9 @@ const Industries = () => {
           best in class product delivery.
         </p>
         <div>
-          <Button variant="secondary" children="Request a quote" />
+          <a href="/services#get-quote">
+            <Button variant="secondary" children="Request a quote" style={{ marginBottom: 20 }} />
+          </a>
           <Button variant="secondary" children="Tell us your product idea" />
         </div>
       </div>

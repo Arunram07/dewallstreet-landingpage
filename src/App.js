@@ -5,6 +5,7 @@ import AboutScreen from "./screen/AboutScreen";
 import GetFreeQuote from "./screen/GetFreeQuote";
 
 import HomeScreen from "./screen/HomeScreen";
+import PageNotFound from "./screen/PageNotFound";
 import ProductScreen from "./screen/ProductScreen";
 import ServiceScreen from "./screen/ServiceScreen";
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/freeQuotes" exact>
             <GetFreeQuote />
           </Route>
+          <Route path="*" component={PageNotFound} />
         </Switch>
         <Footer />
       </Router>

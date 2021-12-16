@@ -56,7 +56,13 @@ const Opensource = ({ variant }) => {
           {renderOpensourceAbout}
           {renderOpensourceCards}
           <div className="opensource_button">
-            <Button variant="secondaryBlack" children="Explore our projects" type="submit"></Button>
+            <a href="/products#our-products">
+              <Button
+                variant="secondaryBlack"
+                children="Explore our projects"
+                type="submit"
+              ></Button>
+            </a>
           </div>
         </>
       ) : (

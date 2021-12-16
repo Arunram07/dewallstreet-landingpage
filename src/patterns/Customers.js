@@ -3,37 +3,49 @@ import "../style/patterns/customer.scss";
 
 const customer = [
   {
-    image: require("../assets/images/adobe.svg").default,
+    image: require("../assets/products/bidify.png").default,
   },
   {
-    image: require("../assets/images/granite.svg").default,
+    image: require("../assets/products/birdly.png").default,
   },
   {
-    image: require("../assets/images/discovery.svg").default,
+    image: require("../assets/products/bscgamble.png").default,
   },
   {
-    image: require("../assets/images/symantec.svg").default,
+    image: require("../assets/products/dockspeed.png").default,
   },
   {
-    image: require("../assets/images/kaplan.svg").default,
+    image: require("../assets/products/egem.png").default,
   },
   {
-    image: require("../assets/images/escalon.svg").default,
+    image: require("../assets/products/fortunetta.png").default,
   },
   {
-    image: require("../assets/images/ikea.svg").default,
+    image: require("../assets/products/icryptonft.png").default,
   },
   {
-    image: require("../assets/images/optimizely.svg").default,
+    image: require("../assets/products/mp4nft.png").default,
   },
   {
-    image: require("../assets/images/telefonica.svg").default,
+    image: require("../assets/products/rubyswap.png").default,
   },
   {
-    image: require("../assets/images/ibm.svg").default,
+    image: require("../assets/products/whirlwind.png").default,
   },
   {
-    image: require("../assets/images/deloitte.svg").default,
+    image: require("../assets/products/whizzo.png").default,
+  },
+  {
+    image: require("../assets/products/codefront.png").default,
+  },
+  {
+    image: require("../assets/products/campfinance.png").default,
+  },
+  {
+    image: require("../assets/products/ngauge.png").default,
+  },
+  {
+    image: require("../assets/products/openshop.png").default,
   },
 ];
 
@@ -47,7 +59,12 @@ const Customers = () => {
       </div>
       <div className="customer_details">
         {customer.map((image, i) => (
-          <img key={i} src={image.image} alt="customer" />
+          <img
+            key={i}
+            src={image.image}
+            alt="customer"
+            style={{ width: 250, height: 95, objectFit: "contain" }}
+          />
         ))}
       </div>
     </div>

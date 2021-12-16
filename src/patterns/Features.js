@@ -1,17 +1,30 @@
 import React from "react";
+import Slider from "react-slick";
+
 import "../style/patterns/features.scss";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import FeatureCard from "../cards/FeatureCard";
 
-import icon from "../assets/icons/icon_medium.svg";
-import Button from "../components/Button";
+// import icon from "../assets/icons/icon_medium.svg";
+// import Button from "../components/Button";
 
 import featureContent from "../data/featureContent.json";
 
 const Features = () => {
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="features">
-      <div>
+      <Slider {...settings}>
         {featureContent.map((data, i) => (
           <FeatureCard
             key={i}
@@ -24,7 +37,22 @@ const Features = () => {
             link={data.link}
           />
         ))}
-        <div className="features_explore">
+      </Slider>
+      {/* <div>
+        {featureContent.map((data, i) => (
+          <FeatureCard
+            key={i}
+            id={data.id}
+            mainHeading={data.mainHeading}
+            data={data.data}
+            date={data.date}
+            time={data.time}
+            heading={data.heading}
+            link={data.link}
+          />
+        ))}
+          </div> */}
+      {/* <div className="features_explore">
           <img src={icon} alt="icon" className="mb-30" style={{ marginTop: "50px" }} />
           <p className="mb-20 text_primary_24 silverGrad">
             Explore more such amazing content & resources
@@ -39,8 +67,8 @@ const Features = () => {
             <Button variant="secondary" children="Explore resources" type="submit"></Button>
             <div></div>
           </div>
-        </div>
-        {/* <FeatureCard
+        </div> */}
+      {/* <FeatureCard
           id="feature1"
           mainHeading="Featured content"
           data="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl blandit odio in. Non semper natoque risus et erat donec at. Pellentesque et suspendisse volutpat elementum et."
@@ -55,16 +83,15 @@ const Features = () => {
           heading="Extra Boot Configuration and Boot-time Tracing with DeWall Street Corporation"
           link="Register now"
         /> */}
-      </div>
-      <div>
-        {/* <FeatureCard
+      {/* <div>
+        <FeatureCard
           id="feature3"
           mainHeading="Featured trainings"
           data="Create a RISC-V CPU with modern open source circuit design tools, methodologies, and microarchitecture, all from your browser."
           heading="Building a RISC-V CPU Core"
           link="Enroll now"
-        /> */}
-      </div>
+        />
+      </div> */}
     </div>
   );
 };

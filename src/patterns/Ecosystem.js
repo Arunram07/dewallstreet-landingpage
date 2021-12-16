@@ -4,38 +4,35 @@ import "../style/patterns/ecosystem.scss";
 
 import EcosystemCard from "../cards/EcosystemCard";
 
-import aIML from '../assets/icons/aIML.svg';
-import blockchain from '../assets/icons/blockchain.svg';
-import cloud from '../assets/icons/cloud.svg';
-import crossTech from '../assets/icons/crossTech.svg';
-import network from '../assets/icons/network.svg';
-import hardware from '../assets/icons/hardware.svg';
+import aIML from "../assets/icons/aIML.svg";
+import blockchain from "../assets/icons/blockchain.svg";
+import cloud from "../assets/icons/cloud.svg";
+import crossTech from "../assets/icons/crossTech.svg";
+import network from "../assets/icons/network.svg";
+import hardware from "../assets/icons/hardware.svg";
 
-import ark from '../assets/icons/ark.svg';
-import akatsuki from '../assets/icons/akatsuki.svg';
-import atix from '../assets/icons/atix.svg';
-import autodesk from '../assets/icons/autodesk.svg';
-import bankOfamerica from '../assets/icons/bankOfamerica.svg';
-import bridge from '../assets/icons/bridge.svg';
-import canonical from '../assets/icons/canonical.svg';
-import commvault from '../assets/icons/commvault.svg';
-import evernym from '../assets/icons/evernym.svg';
-import hyper from '../assets/icons/hyper.svg';
-import trust from '../assets/icons/trust.svg';
-import exo from '../assets/icons/exo.svg';
-
-
+import ark from "../assets/icons/ark.svg";
+import akatsuki from "../assets/icons/akatsuki.svg";
+import atix from "../assets/icons/atix.svg";
+import autodesk from "../assets/icons/autodesk.svg";
+import bankOfamerica from "../assets/icons/bankOfamerica.svg";
+import bridge from "../assets/icons/bridge.svg";
+import canonical from "../assets/icons/canonical.svg";
+import commvault from "../assets/icons/commvault.svg";
+import evernym from "../assets/icons/evernym.svg";
+import hyper from "../assets/icons/hyper.svg";
+import trust from "../assets/icons/trust.svg";
+import exo from "../assets/icons/exo.svg";
 
 const Ecosystem = () => {
   const ecosystemAbout = (
     <div className="ecosystem_about">
       <p className="mb-20 text_dark_24">
-        At DeWall Street Corporation, we work with various sustainable
-        ecosystems
+        At DeWallStreet Corporation, we work with various sustainable ecosystems
       </p>
       <p className="text_secondaryDark_14">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In morbi est
-        enim adipiscing elementum libero a in arcu. Nunc massa, sollicitudim.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In morbi est enim adipiscing
+        elementum libero a in arcu. Nunc massa, sollicitudim.
       </p>
     </div>
   );

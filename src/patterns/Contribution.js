@@ -5,7 +5,7 @@ import { ReactComponent as ArrowRight } from "../assets/icons/arrowRight.svg";
 import { ReactComponent as ArrowRightB } from "../assets/icons/arrowRightBlue.svg";
 import { ReactComponent as ArrowDown } from "../assets/icons/arrowDown.svg";
 import { ReactComponent as ArrowUpB } from "../assets/icons/arrowUpB.svg";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 const Contribution = () => {
   const [toggle, setToggle] = useState("1");
@@ -22,7 +22,13 @@ const Contribution = () => {
           cursor: "pointer",
         }}
       >
-        <p className={`${value}` === toggle ? "text_secondaryDark_16 primeGrad" : "text_secondaryDark_16"}>{heading}</p>
+        <p
+          className={
+            `${value}` === toggle ? "text_secondaryDark_16 primeGrad" : "text_secondaryDark_16"
+          }
+        >
+          {heading}
+        </p>
         {value === toggle ? imageB : image}
       </div>
     );
@@ -30,12 +36,15 @@ const Contribution = () => {
 
   const ContributionData = ({ heading, data, value }) => {
     return (
-      <div className="contribution_detail" style={{ display: `${value}` === toggle ? "block" : "none" }}>
+      <div
+        className="contribution_detail"
+        style={{ display: `${value}` === toggle ? "block" : "none" }}
+      >
         <p className="text_primary_16 mb-20">{heading}</p>
         <p className="text_secondaryLite_14 mb-30">{data}</p>
-        <div>
+        {/* <div>
           <Button variant="secondary" children="Learn more" />
-        </div>
+        </div> */}
       </div>
     );
   };
@@ -44,14 +53,36 @@ const Contribution = () => {
     <div className="contribution">
       <div>
         <p className="text_primary_14_W500 mb-20 silverGrad">OUR CONTRIBUTION TO WORLD</p>
-        <p className="text_primary_24 mb-30 silverGrad">What we did for developers, supporting organizations, and end users</p>
+        <p className="text_primary_24 mb-30 silverGrad">
+          What we did for developers, supporting organizations, and end users
+        </p>
       </div>
       <div className="contribution_verticalView">
         <div>
-          <ContributionList heading="Neutral home for code and collaboration" value="1" image={<ArrowRight />} imageB={<ArrowRightB />} />
-          <ContributionList heading="Ecosystem curation and community building" value="2" image={<ArrowRight />} imageB={<ArrowRightB />} />
-          <ContributionList heading="We’re enterprise ready, the OSS way" value="3" image={<ArrowRight />} imageB={<ArrowRightB />} />
-          <ContributionList heading="We provide insights and tools to succeed" value="4" image={<ArrowRight />} imageB={<ArrowRightB />} />
+          <ContributionList
+            heading="Neutral home for code and collaboration"
+            value="1"
+            image={<ArrowRight />}
+            imageB={<ArrowRightB />}
+          />
+          <ContributionList
+            heading="Ecosystem curation and community building"
+            value="2"
+            image={<ArrowRight />}
+            imageB={<ArrowRightB />}
+          />
+          <ContributionList
+            heading="We’re enterprise ready, the OSS way"
+            value="3"
+            image={<ArrowRight />}
+            imageB={<ArrowRightB />}
+          />
+          <ContributionList
+            heading="We provide insights and tools to succeed"
+            value="4"
+            image={<ArrowRight />}
+            imageB={<ArrowRightB />}
+          />
         </div>
         <div>
           <ContributionData
@@ -90,7 +121,12 @@ const Contribution = () => {
       </div>
       <div className="contribution_horizonatlView">
         <div>
-          <ContributionList heading="Neutral home for code and collaboration" value="1" image={<ArrowDown />} imageB={<ArrowUpB />} />
+          <ContributionList
+            heading="Neutral home for code and collaboration"
+            value="1"
+            image={<ArrowDown />}
+            imageB={<ArrowUpB />}
+          />
           <ContributionData
             heading="No agendas. No politics. Just stuff developers need to build and maintain projects."
             data="The key to a successful open technology project is to ensure a neutral playing field for all developers, 
@@ -99,7 +135,12 @@ const Contribution = () => {
           and governance support programs ensure everyone is on the same playing field."
             value="1"
           />
-          <ContributionList heading="Ecosystem curation and community building" value="2" image={<ArrowDown />} imageB={<ArrowUpB />} />
+          <ContributionList
+            heading="Ecosystem curation and community building"
+            value="2"
+            image={<ArrowDown />}
+            imageB={<ArrowUpB />}
+          />
           <ContributionData
             heading="Helping developers gather the necessary elements to create critical project mass."
             data="The promise of open source runs the gamut from the smallest academic research projects to enterprise 
@@ -108,7 +149,12 @@ const Contribution = () => {
           igniting the adoption of innovative, upcoming technologies by building and scaling developer ecosystems."
             value="2"
           />
-          <ContributionList heading="We’re enterprise ready, the OSS way" value="3" image={<ArrowDown />} imageB={<ArrowUpB />} />
+          <ContributionList
+            heading="We’re enterprise ready, the OSS way"
+            value="3"
+            image={<ArrowDown />}
+            imageB={<ArrowUpB />}
+          />
           <ContributionData
             heading="Transforming code into commerce with OSS-centric marketing tools and support programs."
             data="The biggest hurdle for any project is preparing for enterprise-wide adoption. The Linux Foundation 
@@ -119,7 +165,12 @@ const Contribution = () => {
             image={<ArrowDown />}
             imageB={<ArrowUpB />}
           />
-          <ContributionList heading="We provide insights and tools to succeed" value="4" image={<ArrowDown />} imageB={<ArrowUpB />} />
+          <ContributionList
+            heading="We provide insights and tools to succeed"
+            value="4"
+            image={<ArrowDown />}
+            imageB={<ArrowUpB />}
+          />
           <ContributionData
             heading="Grok what’s really happening in your community. Manage your code."
             data="Without the proper tools to understand how a project is performing and how to take action on those insights, it’s 

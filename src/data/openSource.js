@@ -60,7 +60,7 @@ export const blockchain = [
 
 export const product = [
   {
-    image: require("../assets/images/openSourceProd1.png").default,
+    image: require("../assets/images/Docksppedm.jpg").default,
     heading: "3MF Consortium",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import "../style/screens/aboutScreen.scss";
 
@@ -14,10 +14,6 @@ import tech from "../assets/images/processBuilding.png";
 import FeatureCard from "../cards/FeatureCard";
 
 const AboutScreen = () => {
-  useEffect(() => {
-    document.title = "About | DeWall Street";
-  }, []);
-
   return (
     <div className="nav_pad">
       <Helmet>
@@ -26,9 +22,9 @@ const AboutScreen = () => {
       </Helmet>
       <div className="pad">
         <AboutCarousel
-          heading="ABOUT THE DEWALL STREET CORPORATION"
+          heading="ABOUT THE DEWALLSTREET CORPORATION"
           about="true"
-          para=" At DeWall Street, we are always brainstorming and coming up with new
+          para=" At DeWallStreet, we are always brainstorming and coming up with new
           ideas. Our zeal for creation never dies down. The projects we have
           taken up are a reflection of this very fact. We maintain a standard
           when it comes to product development that never fails to please our
@@ -52,7 +48,7 @@ const AboutScreen = () => {
       <LearnExplore
         img1={img1}
         head1="Creating inclusive communities everywhere"
-        para1="At the DeWall Street Corporation, we are deeply committed to fostering a work culture and environment of diversity and inclusion. Because diversity drives innovation and inclusion means more ideas and contributions."
+        para1="At the DeWallStreet Corporation, we are deeply committed to fostering a work culture and environment of diversity and inclusion. Because diversity drives innovation and inclusion means more ideas and contributions."
         btn1="Learn Diversity & Inclusion efforts"
         img2={img2}
         head2="From fledgling project to category leader"
@@ -61,6 +57,7 @@ const AboutScreen = () => {
         cursus mattis aliquam, sociis nibh. Nec arcu augue eu tellus vitae
         neque."
         btn2="Explore projects"
+        btn2Link="/products"
       />
       <div className="aboutFeatures">
         <FeatureCard

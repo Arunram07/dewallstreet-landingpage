@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Helmet } from "react-helmet";
 import AboutCarousel from "../patterns/AboutCarousel";
 import SharedTech from "../patterns/SharedTech";
@@ -9,9 +9,6 @@ import OpensourceProd from "../patterns/OpensourceProd";
 import Customers from "../patterns/Customers";
 
 const ProductScreen = () => {
-  useEffect(() => {
-    document.title = "Products | DeWall Street";
-  }, []);
   return (
     <div className="nav_pad">
       <Helmet>

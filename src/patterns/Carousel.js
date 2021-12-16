@@ -8,6 +8,9 @@ import { ReactComponent as Slack } from "../assets/icons/slack.svg";
 import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 import { ReactComponent as Discord } from "../assets/icons/discord.svg";
 import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
+import { ReactComponent as File } from "../assets/icons/bx-file.svg";
+import { ReactComponent as Telegram } from "../assets/icons/telegram.svg";
+import { ReactComponent as Instagram } from "../assets/icons/instagram.svg";
 
 import { ReactComponent as ArrowRight } from "../assets/icons/arrowRight.svg";
 
@@ -35,7 +38,10 @@ const Carousel = () => {
           professionalism are our driving forces.{" "}
         </p>
         <div className="hero_link">
-          <p className="mr-20 mt-10 text_primary_14_W500_v2 pointer">Our Whitepaper</p>
+          <p className="mr-20  pointer" style={{ display: "flex", alignItems: "center" }}>
+            <File />
+            <span className="text_primary_14_W500_v2 ml-10">Read inception paper</span>
+          </p>
 
           <Button
             variant="primary"
@@ -55,17 +61,23 @@ const Carousel = () => {
         <a href="/" target="_blank" rel="noreferrer">
           <Facebook />
         </a>
-        <a href="/" target="_blank" rel="noreferrer">
+        <a href="https://in.linkedin.com/company/dewallstreet" target="_blank" rel="noreferrer">
           <Linkedin />
         </a>
         <a href="/" target="_blank" rel="noreferrer">
           <Discord />
         </a>
+        <a href="https://www.instagram.com/dewallstreet.media/" target="_blank" rel="noreferrer">
+          <Instagram />
+        </a>
         <a href="/" target="_blank" rel="noreferrer">
           <Twitter />
         </a>
-        <a href="/" target="_blank" rel="noreferrer">
+        {/* <a href="/" target="_blank" rel="noreferrer">
           <Slack />
+        </a> */}
+        <a href="https://t.me/dewallstreet_pin" target="_blank" rel="noreferrer">
+          <Telegram />
         </a>
       </div>
       <div className="heroFoot_scroll">

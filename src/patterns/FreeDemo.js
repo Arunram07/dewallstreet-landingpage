@@ -277,7 +277,7 @@ const FreeDemo = () => {
           </div>
           <div className="contact_social_arrow">
             <img src={arrowUWhite} alt="up" onClick={() => setToggle("3")} />
-            <button
+            {/* <button
               type="submit"
               style={{
                 border: "none",
@@ -287,7 +287,7 @@ const FreeDemo = () => {
               }}
             >
               <img src={circleDown} alt="down" />
-            </button>
+            </button> */}
           </div>
         </div>
       </>

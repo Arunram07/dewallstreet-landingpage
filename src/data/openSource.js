@@ -60,33 +60,73 @@ export const blockchain = [
 
 export const product = [
   {
-    image: require("../assets/images/Docksppedm.jpg").default,
-    heading: "3MF Consortium",
+    image: require("../assets/mockups/dockspeed.png").default,
+    heading: "Dockspeed",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
   {
-    image: require("../assets/images/openSourceProd2.png").default,
-    heading: "Academy Software Foundation (ASWF)",
+    image: require("../assets/mockups/bidify.png").default,
+    heading: "Bidify",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
   {
-    image: require("../assets/images/openSourceProd3.png").default,
-    heading: "Adversarial Robustness Toolbox",
+    image: require("../assets/mockups/bena.png").default,
+    heading: "Bena",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
   {
-    image: require("../assets/images/openSourceProd4.png").default,
-    heading: "Anomaly Detection Engine for Linux Logs (ADE)",
+    image: require("../assets/mockups/bscgamble.png").default,
+    heading: "Bscgamble",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
   {
-    image: require("../assets/images/openSourceProd5.png").default,
-    heading: "Cloud Native Computing Foundation (CNCF)",
+    image: require("../assets/mockups/fortunetta.png").default,
+    heading: "Fortunetta",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
   {
-    image: require("../assets/images/openSourceProd6.png").default,
-    heading: "ClusterDuck Protocol",
+    image: require("../assets/mockups/cryptosi.png").default,
+    heading: "Cryptosi",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/campfinance.png").default,
+    heading: "Campfinance",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/whalemarker.png").default,
+    heading: "Whalemaker",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/openshop.png").default,
+    heading: "Openshop",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/ngauge.png").default,
+    heading: "Ngauge",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/rubyswap.png").default,
+    heading: "Rubyswap",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/fantomberry.png").default,
+    heading: "Fantom Berry.World",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/mp4nftwebapp.png").default,
+    heading: "Mp4 to Nft",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
+  },
+  {
+    image: require("../assets/mockups/mp4nftadminapp.png").default,
+    heading: "Mp4 to Nft Admin ",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc mi dolor morbi sit praesent phasellus laoreet amet, nulla. Duis tristique consequat donec tempor urna, consequat.",
   },
 ];

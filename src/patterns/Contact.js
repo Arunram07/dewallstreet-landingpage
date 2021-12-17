@@ -249,12 +249,6 @@ const Contact = () => {
           </div>
           <div className="contact_social_arrow">
             <img src={arrowUWhite} alt="up" onClick={() => setToggle("3")} />
-            <button
-              type="submit"
-              style={{ border: "none", outline: "none", background: "transparent" }}
-            >
-              <img src={circleDown} alt="down" onClick={() => setToggle("5")} />
-            </button>
           </div>
         </div>
       </>

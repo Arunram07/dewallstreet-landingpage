@@ -6,6 +6,7 @@ import React from "react";
 // import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 // import { ReactComponent as Discord } from "../assets/icons/discord.svg";
 import TeamCard from "./TeamCard";
+import team from "../data/team.json";
 import "../style/patterns/team.scss";
 
 // const Member = ({ image, name, designation }) => {
@@ -79,15 +80,10 @@ const Team = () => {
   );
 
   const renderMembers = (
-    <div className="team_members" style={{ gridTemplateColumns: "repeat(3,1fr)" }}>
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
-      <TeamCard designation="Founder" email="zeroakasam@gmail.com" />
+    <div className="team_members">
+      {team.map(({ designation, mails }, i) => (
+        <TeamCard key={i.toString()} designation={designation} email={mails} />
+      ))}
 
       {/* <Member name="Courtney Henry" />
       <Member image={member1} name="Marvin McKinney" />

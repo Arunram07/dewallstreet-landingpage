@@ -137,6 +137,19 @@ input[type="text"] {
 .checkBox_div2 {
   background: rgba(9, 18, 21, 1);
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+
+  @media (max-width: 576px) {
+    padding: 15px;
+  }
+
+  > img {
+    width: 32px;
+    height: 32px;
+  }
   input[type="checkbox"] {
     background: transparent;
     border: 1px solid white;
@@ -144,15 +157,13 @@ input[type="text"] {
 }
 
 .checkBoxGrid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   grid-gap: 20px;
   margin-bottom: 30px;
-  @media (max-width: 990px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+
   @media (max-width: 576px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
   }
 }
 

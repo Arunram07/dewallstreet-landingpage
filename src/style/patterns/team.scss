@@ -42,6 +42,11 @@
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+
+    @media (max-width: 576px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
     > .team-card {
       position: relative;
 
@@ -110,8 +115,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30%;
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
       grid-gap: 0%;
     }
     > div:first-child {
@@ -137,4 +142,28 @@
 
 #green {
   background: rgba(65, 167, 93, 1);
+}
+
+.team_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 1em;
+
+  > div {
+    p {
+      a {
+        font-family: "Metropolis-Regular";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.06em;
+        color: #242e33;
+      }
+    }
+
+    p:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+  }
 }

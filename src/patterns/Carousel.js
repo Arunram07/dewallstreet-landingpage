@@ -32,7 +32,7 @@ const Carousel = () => {
         <p className="mb-30 text_secondaryLite_14">
           We are an art-driven community aspiring to create the finest business solutions. How ?
           Through decentralized technologies and frameworks. It doesn't end there. We provide the
-          necessary architecture and design experience to cater to your needs. DeWall Street
+          necessary architecture and design experience to cater to your needs. DeWallStreet
           Corporation understands how important it is to give back. Thus, social responsibility and
           professionalism are our driving forces.{" "}
         </p>

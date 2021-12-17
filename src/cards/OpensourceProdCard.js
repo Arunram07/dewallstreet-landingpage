@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 import "../style/card.scss";
 // import Button from "../components/Button";
 

@@ -4,7 +4,6 @@ import "../style/patterns/navbar.scss";
 import "../style/patterns/menu.scss";
 
 import { ReactComponent as Facebook } from "../assets/icons/fb.svg";
-import { ReactComponent as Slack } from "../assets/icons/slack.svg";
 import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
 import { ReactComponent as Discord } from "../assets/icons/discord.svg";
 import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";

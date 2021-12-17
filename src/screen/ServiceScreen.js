@@ -10,7 +10,7 @@ import Opensource from "../patterns/Opensource";
 
 import service from "../assets/images/servicescreen.png";
 import FreeDemo from "../patterns/FreeDemo";
-import Faqs from "../patterns/Faqs";
+// import Faqs from "../patterns/Faqs";
 
 const ServiceScreen = () => {
   return (

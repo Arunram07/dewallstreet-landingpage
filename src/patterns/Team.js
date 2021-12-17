@@ -1,43 +1,43 @@
 import React from "react";
 // import Button from "../components/Button";
 
-import member1 from "../assets/images/member1.png";
-import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
-import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
-import { ReactComponent as Discord } from "../assets/icons/discord.svg";
+// import member1 from "../assets/images/member1.png";
+// import { ReactComponent as Twitter } from "../assets/icons/twitter.svg";
+// import { ReactComponent as Linkedin } from "../assets/icons/linkedin.svg";
+// import { ReactComponent as Discord } from "../assets/icons/discord.svg";
 import TeamCard from "./TeamCard";
 import "../style/patterns/team.scss";
 
-const Member = ({ image, name, designation }) => {
-  const renderInfo = (
-    <div className="team-card_hover-block">
-      <h5 className="mb-10">{name}</h5>
-      <p className=" subtitle mb-20">Chairman</p>
-      <p className="mb-20">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio nibh malesuada egestas a proin
-        consectetur pulvinar. Enim volutpat ridiculus dui.
-      </p>
-      <div>
-        <a href="/">
-          <Linkedin />
-        </a>
-        <a href="/">
-          <Discord />
-        </a>
-        <a href="/">
-          <Twitter />
-        </a>
-      </div>
-    </div>
-  );
-  return (
-    <div className="team-card">
-      <img src={image} alt="member" />
-      <p className="text_primary_12_W500">{name}</p>
-      {renderInfo}
-    </div>
-  );
-};
+// const Member = ({ image, name, designation }) => {
+//   const renderInfo = (
+//     <div className="team-card_hover-block">
+//       <h5 className="mb-10">{name}</h5>
+//       <p className=" subtitle mb-20">Chairman</p>
+//       <p className="mb-20">
+//         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio nibh malesuada egestas a proin
+//         consectetur pulvinar. Enim volutpat ridiculus dui.
+//       </p>
+//       <div>
+//         <a href="/">
+//           <Linkedin />
+//         </a>
+//         <a href="/">
+//           <Discord />
+//         </a>
+//         <a href="/">
+//           <Twitter />
+//         </a>
+//       </div>
+//     </div>
+//   );
+//   return (
+//     <div className="team-card">
+//       <img src={image} alt="member" />
+//       <p className="text_primary_12_W500">{name}</p>
+//       {renderInfo}
+//     </div>
+//   );
+// };
 
 const Team = () => {
   // const renderTitles = (

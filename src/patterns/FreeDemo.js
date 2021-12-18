@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import emailjs from "emailjs-com";
 import "../style/patterns/contact.scss";
 
 import enter from "../assets/icons/enter.svg";
@@ -66,15 +67,12 @@ const FreeDemo = () => {
   const handleSubmit = async (values, onSubmitProps) => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/services", {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: {
-          "content-type": "application/json",
-        },
-      });
-      const data = await res.json();
-      console.log(data);
+      await emailjs.send(
+        "service_cmsml5m",
+        "template_xw3p9ql",
+        values,
+        "user_AxsKZkk14SM007p3CXhDA"
+      );
       setIsLoading(false);
       onSubmitProps.setSubmitting(false);
       onSubmitProps.resetForm();

@@ -19,9 +19,15 @@ const OpensourceProd = () => {
           technology ecosystems that transform industries.
         </p>
       </div>
-      <div className="openSource_card">
+      <div className="openSource_card ">
         {product.slice(0, index).map((data, i) => (
-          <OpensourceProdCard key={i} image={data.image} heading={data.heading} para={data.para} />
+          <OpensourceProdCard
+            key={i}
+            image={data.image}
+            heading={data.heading}
+            para={data.para}
+            proto={data.proto}
+          />
         ))}
       </div>
       <div className="openSource_buttonWrap">

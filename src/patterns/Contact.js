@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import "../style/patterns/contact.scss";
 
@@ -13,42 +14,35 @@ import Button from "../components/Button";
 import ques1 from "../assets/icons/ques1.svg";
 import ques2 from "../assets/icons/ques2.svg";
 import ques3 from "../assets/icons/ques3.svg";
-import ques4 from "../assets/icons/ques4.svg";
+// import ques4 from "../assets/icons/ques4.svg";
 import arrowUWhite from "../assets/icons/arrowUpWhite.svg";
 
-const Contact = () => {
+const url =
+  "https://dewallstreet.us5.list-manage.com/subscribe/post?u=01f6e78003aa1a035a7743ec0&amp;id=1e8caaefdc";
+
+const Contact = ({ status, message, onValidated }) => {
   const [toggle, setToggle] = useState("0");
   const [isLoading, setIsLoading] = useState(false);
   const initialState = {
     firstname: "",
     email: "",
     surname: "",
-    subscribed: "",
   };
 
   const validationSchema = Yup.object({
     firstname: Yup.string().required("This field is required"),
     email: Yup.string().email("Invalid email format").required("This field is required"),
     surname: Yup.string().required("This field is required"),
-    subscribed: Yup.string().required("This field is required"),
   });
 
   const handleSubmit = async (values, onSubmitProps) => {
     setIsLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/subscribe", {
-        method: "POST",
-        body: JSON.stringify(values),
-        headers: {
-          "content-type": "application/json",
-        },
-      });
-      const data = await res.json();
-      console.log(data);
+      await onValidated({ EMAIL: values.email, FNAME: values.firstname, LNAME: values.surname });
       setIsLoading(false);
       onSubmitProps.setSubmitting(false);
       onSubmitProps.resetForm();
-      setToggle("5");
+      setToggle("4");
     } catch (error) {
       console.log(error);
       setIsLoading(false);
@@ -179,57 +173,6 @@ const Contact = () => {
           <Field type="text" placeholder="Type your answer here" name="email" />
           <p className="error_input mb-20"> {errors?.email}</p>
           <div className="contact_link">
-            <Button
-              variant="secondary"
-              children="Okay"
-              type="submit"
-              onClick={errors.email ? null : () => setToggle("4")}
-            ></Button>
-            <p className="ml-20 mt-10">
-              <span className="text_secondaryLite_14">press Enter</span>
-              <img src={enter} alt="arrow" />
-            </p>
-          </div>
-        </div>
-        <div className="contact_social">
-          <div>
-            <img src={ques3} alt="loading" />
-            <p className="text_secondaryLite_14">3 out of 4 questions answered</p>
-          </div>
-          <div className="contact_social_arrow">
-            <img src={arrowUWhite} alt="up" onClick={() => setToggle("2")} />
-            <img src={circleDown} alt="down" onClick={() => setToggle("4")} />
-          </div>
-        </div>
-      </>
-    );
-  };
-
-  const Ques4 = ({ errors }) => {
-    return (
-      <>
-        <div>
-          <p className="mb-20 text_primary_24 silverGrad">
-            In addition would you like to receive marketing emails about news, events and training
-            from DeWall Street Corporation and its Projects.
-          </p>
-
-          <div className="checkBox_div">
-            <label className="container">
-              <Field type="radio" name="subscribed" value="yes" />
-              &nbsp;
-              <span className="ml-5">I wish to get marketing emails</span>
-            </label>
-          </div>
-          <div className="checkBox_div">
-            <label className="container">
-              <Field type="radio" name="subscribed" value="no" />
-              &nbsp;
-              <span className="ml-5">I don’t wish to get marketing emails</span>
-            </label>
-          </div>
-          <p className="error_input mb-20"> {errors?.subscribed}</p>
-          <div className="contact_link" style={{ marginTop: "30px" }}>
             <button
               type="submit"
               style={{ border: "none", outline: "none", background: "transparent" }}
@@ -244,11 +187,11 @@ const Contact = () => {
         </div>
         <div className="contact_social">
           <div>
-            <img src={ques4} alt="loading" />
-            <p className="text_secondaryLite_14">4 out of 4 questions answered</p>
+            <img src={ques3} alt="loading" />
+            <p className="text_secondaryLite_14">3 out of 4 questions answered</p>
           </div>
           <div className="contact_social_arrow">
-            <img src={arrowUWhite} alt="up" onClick={() => setToggle("3")} />
+            <img src={arrowUWhite} alt="up" onClick={() => setToggle("2")} />
           </div>
         </div>
       </>
@@ -301,8 +244,7 @@ const Contact = () => {
             {toggle === "1" && <Ques1 {...props} />}
             {toggle === "2" && <Ques2 {...props} />}
             {toggle === "3" && <Ques3 {...props} />}
-            {toggle === "4" && <Ques4 {...props} />}
-            {toggle === "5" && <Final />}
+            {toggle === "4" && <Final />}
           </Form>
         )}
       </Formik>
@@ -311,4 +253,19 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+const ContactForm = () => {
+  return (
+    <MailchimpSubscribe
+      url={url}
+      render={({ subscribe, status, message }) => (
+        <Contact
+          status={status}
+          message={message}
+          onValidated={(formData) => subscribe(formData)}
+        />
+      )}
+    />
+  );
+};
+
+export default ContactForm;

@@ -2,7 +2,7 @@ import React from "react";
 import "../style/card.scss";
 // import Button from "../components/Button";
 
-const OpensourceProdCard = ({ image, heading, para }) => {
+const OpensourceProdCard = ({ image, heading, para, proto }) => {
   return (
     <div className="opensourceCard">
       <div style={{ height: "320px", position: "relative" }} className="mb-20 image-container">
@@ -12,7 +12,9 @@ const OpensourceProdCard = ({ image, heading, para }) => {
           alt="prodImage"
           className="opensourceCard_prodImage"
         />
-        <button className="hover-btn">View Project</button>
+        <a href={proto} target="_blank" rel="noreferrer">
+          <button className="hover-btn">View Project</button>
+        </a>
       </div>
       <p className="text_dark_16 mb-20">{heading}</p>
       <p className="text_secondaryDark_14 mb-20">{para}</p>

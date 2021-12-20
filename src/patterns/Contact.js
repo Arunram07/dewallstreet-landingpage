@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
@@ -22,6 +22,7 @@ const url =
 
 const Contact = ({ status, message, onValidated }) => {
   const [toggle, setToggle] = useState("0");
+  const [errorMsg, setErrorMsg] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const initialState = {
     firstname: "",
@@ -29,27 +30,32 @@ const Contact = ({ status, message, onValidated }) => {
     surname: "",
   };
 
+  useEffect(() => {
+    if (status === "sending") setIsLoading(true);
+    else if (status === "error") {
+      setIsLoading(false);
+      if (message && message?.includes("is already subscribed")) {
+        setErrorMsg("You're already suscribed to our newsletter");
+        setTimeout(() => {
+          setErrorMsg("");
+        }, 5000);
+      }
+    } else if (status === "success") {
+      setIsLoading(false);
+      setToggle("4");
+    }
+  }, [status, message]);
+
   const validationSchema = Yup.object({
     firstname: Yup.string().required("This field is required"),
     email: Yup.string().email("Invalid email format").required("This field is required"),
     surname: Yup.string().required("This field is required"),
   });
 
-  const handleSubmit = async (values, onSubmitProps) => {
-    setIsLoading(true);
-    try {
-      await onValidated({ EMAIL: values.email, FNAME: values.firstname, LNAME: values.surname });
-      setIsLoading(false);
-      onSubmitProps.setSubmitting(false);
-      onSubmitProps.resetForm();
-      setToggle("4");
-    } catch (error) {
-      console.log(error);
-      setIsLoading(false);
-    } finally {
-      onSubmitProps.setSubmitting(false);
-      onSubmitProps.resetForm();
-    }
+  const handleSubmit = (values, onSubmitProps) => {
+    onValidated({ EMAIL: values.email, FNAME: values.firstname, LNAME: values.surname });
+    onSubmitProps.setSubmitting(false);
+    onSubmitProps.resetForm();
   };
 
   const Ques = () => {
@@ -171,7 +177,7 @@ const Contact = ({ status, message, onValidated }) => {
             Great! Now what’s your email address <span className="line"></span>?
           </p>
           <Field type="text" placeholder="Type your answer here" name="email" />
-          <p className="error_input mb-20"> {errors?.email}</p>
+          <p className="error_input mb-20"> {errorMsg ? errorMsg : errors?.email}</p>
           <div className="contact_link">
             <button
               type="submit"

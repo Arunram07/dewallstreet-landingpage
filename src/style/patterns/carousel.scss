@@ -5,6 +5,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  min-height: calc(100vh + 30px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-gap: 2em;
   @media (max-width: 768px) {
     padding: 122px 50px 30px;
     // text-align: center;
@@ -38,7 +43,6 @@
 .heroFoot {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
 
   @media (max-width: 576px) {
     flex-direction: column;

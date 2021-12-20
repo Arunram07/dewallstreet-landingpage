@@ -7,7 +7,7 @@ import OpensourceProdCard from "../cards/OpensourceProdCard";
 import { product } from "../data/openSource";
 
 const OpensourceProd = () => {
-  const [index, setIndex] = useState(2);
+  const [index, setIndex] = useState(4);
   return (
     <div className="openSource" id="our-products">
       <div className="openSource_heading">
@@ -31,11 +31,13 @@ const OpensourceProd = () => {
         ))}
       </div>
       <div className="openSource_buttonWrap">
-        <Button
-          variant="secondaryBlack"
-          children="Explore more projects"
-          onClick={() => setIndex(product.length)}
-        />
+        {product.length !== index && (
+          <Button
+            variant="secondaryBlack"
+            children="Explore more projects"
+            onClick={() => setIndex(product.length)}
+          />
+        )}
       </div>
     </div>
   );
